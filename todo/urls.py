@@ -29,7 +29,8 @@ urlpatterns = [
     path("test3/", third),
     path("dz311/", dz311, name="dz311"),
     path("dz312/", dz312, name="dz312"),
-    path("dz313/", dz313, name="dz313")
+    path("dz313/", dz313, name="dz313"),
+    path("delete-todo/<id>/",delete_todo, name="delete-todo"),
 
 ]   +static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) \
     +static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

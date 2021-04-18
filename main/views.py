@@ -25,6 +25,8 @@ def dz312(request):
 def dz313(request):
     return render(request, "dz313.html")
 
+def add_todo
+
 
 
 
