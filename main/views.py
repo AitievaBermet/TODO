@@ -25,8 +25,12 @@ def dz312(request):
 def dz313(request):
     return render(request, "dz313.html")
 
-def add_todo
-
+def add_todo(request):
+    form = request.POST
+    text = form["todo_text"] 
+    todo = ToDo(text=text)
+    todo.save()
+    return HttpResponse("Форма получена") 
 
 
 

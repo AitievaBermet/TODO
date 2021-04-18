@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from main.views import homepage, test, second, third,dz311,dz312,dz313
+from main.views import  *        #homepage, test, second, third,dz311,dz312,dz313
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -30,7 +30,7 @@ urlpatterns = [
     path("dz311/", dz311, name="dz311"),
     path("dz312/", dz312, name="dz312"),
     path("dz313/", dz313, name="dz313"),
-    path("delete-todo/<id>/",delete_todo, name="delete-todo"),
-
-]   +static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) \
+    path("add-todo", add_todo, name="add-todo"),
+    
+ ]  +static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) \
     +static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
