@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, HttpResponse,redirect
 from .models import ToDo
 
 
@@ -30,7 +30,7 @@ def add_todo(request):
     text = form["todo_text"] 
     todo = ToDo(text=text)
     todo.save()
-    return HttpResponse("Форма получена") 
+    return redirect(test) 
 
 
 
