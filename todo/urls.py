@@ -30,7 +30,11 @@ urlpatterns = [
     path("dz311/", dz311, name="dz311"),
     path("dz312/", dz312, name="dz312"),
     path("dz313/", dz313, name="dz313"),
-    path("add-todo", add_todo, name="add-todo"),
-    
+    path("add-todo/", add_todo, name="add-todo"),
+    path("delete-todo/<id>/", delete_todo, name="delete-todo"),
+    path("mark-todo/<id>/", mark_todo, name="mark-todo"),
+    path("unmark-todo/<id>/", unmark_todo, name="unmark-todo"), 
+    path("close-todo/<id>/", close_todo, name="close-todo"),
+ 
  ]  +static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) \
     +static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

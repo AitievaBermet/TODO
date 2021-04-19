@@ -101,6 +101,11 @@ align-items: center;
     font-family: sans-serif;
 }
 
+.todo_item_header h4 a{
+    text-decoration: none;
+}
+
+
 .todo_item_footer p{
     font-size: 15px;
     font-family: sans-serif;
